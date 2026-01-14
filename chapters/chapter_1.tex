@@ -1194,7 +1194,7 @@ Quindi una possibile proposizione che nega la formula proposta può essere: ``No
 	\begin{enumerate}
 		\item $(\forall x \in \mathbb{N})(x+1 < x \implies x^{2}=1)$
 		\item $(\exists x \in \mathbb{N}) (\forall y \in \mathbb{N}(x \leq y))$
-		\item $(\forall x \in \mathbb{N)}(\exists y \in \mathbb{N}(x<y))$
+		\item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N}(x<y))$
 		\item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N}((x=y+1)\implies(x<y)))$
 		\item $(\exists x \in \mathbb{N}) (\forall y \in \mathbb{N}((x<y)\lor(y<x)\lor(y=11)))$
 		\item $(\exists x \in \mathbb{N})(\forall y \in \mathbb{Z}((x \neq y)\implies (x<y)))$
@@ -1205,7 +1205,7 @@ Quindi una possibile proposizione che nega la formula proposta può essere: ``No
 \begin{enumerate}
 	\item L'espressione risulta essere una formula vera in quanto l'implicazione $ (x+1 < x \implies x^{2}=1)$ è sempre vera in quanto l'antecedente è falsa.
 	\item L'espressione afferma l'esistenza di un numero naturale minore od uguale a ciascun $y \in \mathbb{N}$. Tale elemento esiste (lo zero) e quindi la formula risulta vera.
-	\item Al contrario questa espressione risulta falsa in quanto non esiste un elemento in $\mathbb{N}$ minore di ciascun elemento di $\mathbb{N}$.
+	\item Questa espressione risulta vera. Per ogni numero naturale $x$ esiste sempre un numero naturale $y$ maggiore di $x$ (per esempio $y = x+1$).
 	\item La formula esprime l'esistenza, per ogni numero naturale $x \in \mathbb{N}$, di un $y$ che sia il suo successore il che è sempre vero.
 	\item La formula risulta vera in quanto, esiste un numero naturale il quale per ogni $y \in \mathbb{N}$ è sempre vera la proposizione $(x<y)\lor(y<x)\lor(y=11)$. Infatti, preso $x=11$ la proposizione è vera.
 	\item La formula risulta falsa. Non esiste infatti un naturale per il quale, per ogni numero intero relativo, se $x \neq y$ allora $x < y$. Basta infatti considerare il seguente controesempio: sia $x =3$ e $y=1$ allora $x \neq y$ ma $x>y$.
@@ -1273,7 +1273,7 @@ e neghiamo:
 \begin{align*}
 	\neg \Bigl(\exists x \bigl(x \in y \land (x=y \iff x \in y)\bigr)\Bigr) &\iff \forall x \Bigl(\neg \bigl(x \in y \land (x=y \iff x \in y)\bigr)\Bigr) \\
 	&\iff \forall x \Bigl(\neg(x \in y) \lor \neg (x=y \iff x \in y)\Bigr)\\
-	&\iff \bigl(x \notin y \lor (x\neg y \iff x \in y)\bigr)
+	&\iff \bigl(x \notin y \lor ((x=y)\; \xor \;(x \in y))\bigr)
 \end{align*}
 \hfill \blacksquare
 \begin{exsbox}
